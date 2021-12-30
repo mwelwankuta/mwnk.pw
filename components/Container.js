@@ -8,13 +8,6 @@ export default function Container(props) {
 
   return (
     <div className="bg-gradient-to-tl from-warm-gray-900 via-black text-gray-900 to-black justify-between">
-      {/* <div className="flex flex-col justify-center">
-        <nav className="flex px-4 items-center justify-between w-full relative max-w-1xl mx-auto pt-8 pb-8 sm:pb-16 text-gray-900 bg-gray-50 dark:bg-black bg-opacity-60 dark:text-gray-100">
-          <a href="#skip" className="skip-nav">
-            Skip to content
-          </a>
-        </nav>
-      </div> */}
       <div className="flex flex-col justify-between min-h-screen">
         <main
           id="skip"
