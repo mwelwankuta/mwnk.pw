@@ -1,12 +1,10 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import Hero from '@/components/Hero'
-
-import NewsletterForm from '@/components/NewsletterForm'
+import InternalCard from '@/components/InternalCard'
 
 const MAX_DISPLAY = 2
 
@@ -30,10 +28,10 @@ export default function Home({ posts }) {
             {siteMetadata.description}
           </p>
         </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+        <ul className="font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white pt-2">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, title } = frontMatter
             return (
               <li key={slug} className="py-3">
                 <article>
@@ -55,25 +53,8 @@ export default function Home({ posts }) {
                               {title}
                             </Link>
                           </h2>
-                          {/* <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div> */}
                         </div>
-                        {/* <div className="prose text-gray-500 max-w-none dark:text-gray-400">
-                          {summary}
-                        </div> */}
                       </div>
-                      {/* <div className="text-base font-medium leading-6">
-                       <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div> */}
                     </div>
                   </div>
                 </article>
@@ -93,11 +74,6 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-      {/* {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
-        </div>
-      )} */}
     </>
   )
 }

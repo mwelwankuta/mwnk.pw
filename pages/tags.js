@@ -22,7 +22,7 @@ export default function Tags({ tags }) {
             Tags
           </h1>
         </div>
-        <div className="flex flex-wrap max-w-lg">
+        <div className="flex flex-wrap max-w-lg dark:text-gray-300 hover:text-black dark:hover:text-white">
           {Object.keys(tags).length === 0 && 'No tags found.'}
           {sortedTags.map((t) => {
             return (
