@@ -39,4 +39,18 @@ module.exports = withBundleAnalyzer({
 
     return config
   },
+  typescript: {
+    ignoreDevErrors: true,
+    ignoreBuildErrors: true,
+    check: false,
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      propFilter: (prop) => {
+        if (prop.parent) {
+          return !prop.parent.fileName.includes('node_modules')
+        }
+        return true
+      },
+    },
+  },
 })
