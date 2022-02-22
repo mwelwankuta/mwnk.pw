@@ -1,6 +1,13 @@
 import CustomLink from '@/components/CustomLink'
+import React from 'react'
 
-export default function InternalCard(href, title, children) {
+interface Props {
+  href: string
+  title: string
+  children: React.ReactNode
+}
+
+const InternalCard: React.FC<Props> = ({ href, title, children }) => {
   return (
     <CustomLink
       href={href}
@@ -14,3 +21,5 @@ export default function InternalCard(href, title, children) {
     </CustomLink>
   )
 }
+
+export default InternalCard
