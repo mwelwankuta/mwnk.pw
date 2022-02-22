@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "next-remote-watch ./data",
-    "dev": "yarn run clean && TAILWIND_MODE=watch next dev",
+    "dev": "npm run clean && TAILWIND_MODE=watch next dev",
     "clean": "rm -rf ./.next",
     "build": "next build && node ./scripts/generate-sitemap",
     "serve": "next start",
