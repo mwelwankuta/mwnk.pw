@@ -2,8 +2,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
-const isDevelopment = process.env.NODE_ENV === 'development'
-
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
@@ -45,5 +43,3 @@ module.exports = withBundleAnalyzer({
     ignoreBuildErrors: true,
   },
 })
-
-module.exports = isDevelopment
