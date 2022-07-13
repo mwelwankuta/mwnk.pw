@@ -1,13 +1,12 @@
+import { Container } from '@/lib/types/common'
 import CustomLink from '@/components/CustomLink'
-import React from 'react'
 
-interface Props {
+interface InternalCardProps extends Container {
   href: string
   title: string
-  children: React.ReactNode
 }
 
-const InternalCard: React.FC<Props> = ({ href, title, children }) => {
+export default function InternalCard({ href, title, children }: InternalCardProps) {
   return (
     <CustomLink
       href={href}
@@ -21,5 +20,3 @@ const InternalCard: React.FC<Props> = ({ href, title, children }) => {
     </CustomLink>
   )
 }
-
-export default InternalCard
