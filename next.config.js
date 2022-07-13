@@ -39,7 +39,7 @@ module.exports = withBundleAnalyzer({
     return config
   },
   typescript: {
-    ignoreDevErrors: true,
-    ignoreBuildErrors: true,
+    ignoreDevErrors: false,
+    ignoreBuildErrors: false,
   },
 })
