@@ -121,7 +121,7 @@ const HomeModule: FC<{ project: [MiniCardProps] }> = ({ project }) => {
         </motion.div>
         <I.ArrowSnake className="absolute hidden xl:inline top-[1rem] -right-[3.8rem] w-[60px] h-[120px] -rotate-12 transform -scale-x-100 fill-white" />
         <p className="text-lg pb-3 pl-2 hover:fg-[#6fd49a]">
-          Places I've worked
+          Places I&apos;ve worked
         </p>
         <div className="space-y-5 pb-10">
           {formerEmployers.map(({ _id, title, siteUrl }, index) => (
