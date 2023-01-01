@@ -47,8 +47,8 @@ const Icon = {
     <span
       className={`flex items-center justify-center h-3 w-3 absolute ${className}`}
     >
-      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-      <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-mwelwa-orange opacity-75"></span>
+      <span className="relative inline-flex rounded-full h-3 w-3 bg-mwelwa-orange"></span>
     </span>
   ),
 };

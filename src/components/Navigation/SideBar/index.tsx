@@ -31,7 +31,7 @@ export const SideBar = ({ state, setState }: SideBarProps) => {
             className="flex items-center space-y-2 writing-mode-vertical"
           >
             <I.Copyright className="w-5 h-5 stroke-white" />
-            <p>Daniel M.</p>
+            <p>Mwelwa Nkuta.</p>
           </Link>
           <p className="font-mono text-sm">{`<ZM, ${isCountry.of("ZM")} />`}</p>
         </div>

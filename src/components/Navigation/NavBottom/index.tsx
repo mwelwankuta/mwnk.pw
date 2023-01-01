@@ -21,7 +21,7 @@ const NavigationBottom = () => {
           <Link
             key={id}
             href={path}
-            className="inline-flex items-center justify-center gap-1 hover:text-emerald-400"
+            className="inline-flex items-center justify-center gap-1 hover:text-mwelwa-orange"
           >
             {icon}
             <span className="text-base">{title}</span>

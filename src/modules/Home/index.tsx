@@ -10,30 +10,8 @@ import { MiniCard } from "@components/Card/MiniCard";
 import { FadeContainer, Fade } from "@lib/animation";
 
 import { MiniCardProps } from "@interfaces/MiniCard";
-import { WorkProps } from "@interfaces/Jobs";
 import { siteMetadata } from "@data/siteMetadata";
-
-// need to move this out of here
-const formerEmployers: WorkProps[] = [
-  {
-    _id: "1",
-    title: "DevInterface s.r.l. ",
-    description: "DevInterface.",
-    siteUrl: "https://www.devinterface.com/it",
-  },
-  {
-    _id: "2",
-    title: "Microverse",
-    description: "Microverse.",
-    siteUrl: "https://www.microverse.org/",
-  },
-  {
-    _id: "3",
-    title: "TechSpot Dev",
-    description: "TechSpotDev.",
-    siteUrl: "https://techspotdev.com/",
-  },
-];
+import { formerEmployers } from "@constants/index";
 
 const HomeModule: FC<{ project: [MiniCardProps] }> = ({ project }) => {
   const constraintsRef = useRef<HTMLDivElement>(null);
@@ -47,15 +25,6 @@ const HomeModule: FC<{ project: [MiniCardProps] }> = ({ project }) => {
         animate="visible"
         className="col-span-1 sm:col-span-2"
       >
-        <motion.p
-          variants={Fade}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.1 }}
-          className="text-lg"
-        >
-          Hi, I&apos;m a Senior
-        </motion.p>
         <motion.h1
           variants={Fade}
           initial="hidden"
@@ -63,7 +32,7 @@ const HomeModule: FC<{ project: [MiniCardProps] }> = ({ project }) => {
           transition={{ delay: 0.3 }}
           className="intro-heading -mx-2"
         >
-          Full-Stack Developer
+          Full Stack Developer
         </motion.h1>
         <motion.h5
           variants={Fade}
@@ -72,8 +41,9 @@ const HomeModule: FC<{ project: [MiniCardProps] }> = ({ project }) => {
           transition={{ delay: 0.5 }}
           className="py-3 text-lg md:text-xl text-gray-500 select-none max-w-lg"
         >
-          <span className="text-white">from Lusaka, ZM.</span> A self-taught
-          developer with a degree in Computer Science.
+          <span className="text-white">from Ndola, Zambia.</span> A self-taught
+          developer currently studying Software Engineering at The Zambian
+          University of Technology.
         </motion.h5>
         <motion.div
           ref={constraintsRef}
@@ -91,7 +61,7 @@ const HomeModule: FC<{ project: [MiniCardProps] }> = ({ project }) => {
             className="intro-button"
           >
             <I.Mail className="w-5 h-5 mr-2" />
-            Let&apos;s talk
+            Message Me
           </motion.button>
         </motion.div>
       </motion.div>
@@ -104,14 +74,14 @@ const HomeModule: FC<{ project: [MiniCardProps] }> = ({ project }) => {
         >
           <I.Notification className="-right-1 -top-2" />
           <Images
-            src="/static/profile-me.jpg"
-            alt="Daniel M. profile"
+            src="/static/mwelwa.png"
+            alt="Mwelwa Nkuta profile"
             size="h-14 w-14"
             className="rounded-xl"
           />
           <span className="text-xl font-medium ml-3">
-            Hi, I&apos;m Daniel M.{" "}
-            <Link href={siteMetadata.resume} className="text-emerald-500">
+            Hi, I&apos;m Mwelwa Nkuta.{" "}
+            <Link href={siteMetadata.resume} className="text-mwelwa-orange">
               <span role="img" aria-label="waving hand" className="wave">
                 👋
               </span>
@@ -120,18 +90,23 @@ const HomeModule: FC<{ project: [MiniCardProps] }> = ({ project }) => {
           </span>
         </motion.div>
         <I.ArrowSnake className="absolute hidden xl:inline top-[1rem] -right-[3.8rem] w-[60px] h-[120px] -rotate-12 transform -scale-x-100 fill-white" />
-        <p className="text-lg pb-3 pl-2 hover:fg-[#6fd49a]">
+        <p className="text-lg pb-3 pl-2 hover:fg-mwelwa-orange">
           Places I&apos;ve worked
         </p>
         <div className="space-y-5 pb-10">
-          {formerEmployers.map(({ _id, title, siteUrl }, index) => (
-            <MiniCard
-              key={_id}
-              href={siteUrl}
-              title={title}
-              transition={{ delay: 0.8 + index - 0.4 }}
-            />
-          ))}
+          {formerEmployers.map(
+            ({ _id, title, siteUrl, description,image, position }, index) => (
+              <MiniCard
+                key={_id}
+                href={siteUrl}
+                description={description}
+                image={image}
+                title={title}
+                position={position}
+                transition={{ delay: 0.8 + index - 0.4 }}
+              />
+            )
+          )}
         </div>
       </div>
     </article>

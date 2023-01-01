@@ -103,7 +103,7 @@ module.exports = {
           800: "#930C4A",
           900: "#7A0747",
         },
-        "spotify-green": "#1DB954",
+        "mwelwa-orange": "#FFA900",
       },
       typography: (theme) => ({
         DEFAULT: {

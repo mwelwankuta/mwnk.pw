@@ -16,7 +16,7 @@ const ContactsModule = () => {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.1 }}
-          className="text-xl text-emerald-400"
+          className="text-xl text-mwelwa-orange"
         >
           Contact.
         </motion.p>
@@ -52,14 +52,14 @@ const ContactsModule = () => {
           <I.ArrowSnake className="absolute -top-[7.5rem] -left-[5.5rem] w-[84px] h-[172px] fill-white" />
           <Link
             href={siteMetadata.social.email}
-            className={`contact-button hover:text-emerald-400`}
+            className={`contact-button hover:text-mwelwa-orange`}
           >
             <BsEnvelope className="text-2xl mr-2" />
-            mmatongo_@hotmail.com
+            mwelwankuta@gmail.com
           </Link>
           <h4 className="contact-button">
             <BsPin className="text-2xl mr-2" />
-            Lusaka, ZM
+            Ndola, ZM
           </h4>
         </motion.div>
         <motion.a

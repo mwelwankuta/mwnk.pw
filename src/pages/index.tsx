@@ -27,7 +27,7 @@ const Home: NextPage<{ project: [MiniCardProps] }> = ({ project }) => {
   return (
     <>
       <SEO
-        title="✱ Full-Stack Developer - DM"
+        title="Full Stack Developer - Mwelwa Nkuta"
         url={process.env.NEXT_PUBLIC_URL + asPath}
       />
       {isLoading ? (

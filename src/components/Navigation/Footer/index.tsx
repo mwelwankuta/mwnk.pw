@@ -19,7 +19,7 @@ export const Footer = ({ isFooter }: FooterProps) => {
           ))}
         </div>
         <h3 className="font-normal text-base">
-          &copy; {new Date().getFullYear()} Daniel M. Matongo
+          &copy; {new Date().getFullYear()} Mwelwa Nkuta
         </h3>
       </footer>
     );

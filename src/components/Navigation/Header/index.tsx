@@ -22,7 +22,7 @@ export const Header = ({ isHeader }: HeaderProps) => {
             <div className="col-span-3 sm:col-span-2 flex items-center">
               <Link href="/" className="flex items-center space-x-2">
                 <I.Copyright className="w-5 h-5 stroke-white" />
-                <p>Daniel M. Matongo</p>
+                <p>Mwelwa Nkuta</p>
               </Link>
             </div>
             <div className="col-span-1 hidden sm:flex items-center justify-center space-x-4">
@@ -38,14 +38,14 @@ export const Header = ({ isHeader }: HeaderProps) => {
               whileHover={{
                 // scale: 1.05,
                 transition: { duration: 0.2 },
-                borderColor: "#10B981",
+                borderColor: "#FFA500",
               }}
               transition={{ type: "spring", stiffness: 100 }}
               className="col-span-1 flex items-center justify-end space-x-3"
             >
               <Link
                 href={siteMetadata.social.github}
-                className="p-2 border-2 rounded-lg border-gray-800 hover:border-emerald-400"
+                className="p-2 border-2 rounded-lg border-gray-800 hover:border-mwelwa-orange"
                 target="_blank"
               >
                 <TbBrandGithub className="text-xl" />

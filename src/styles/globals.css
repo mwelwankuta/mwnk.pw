@@ -29,7 +29,7 @@
 
   .intro-button {
     @apply my-4 px-8 py-2 inline-flex items-center
-    bg-emerald-400 hover:bg-white text-gray-900
+    bg-mwelwa-orange hover:bg-white text-gray-900
     text-lg font-medium rounded-lg cursor-pointer;
   }
 

@@ -25,7 +25,8 @@
       "@modules/*": ["src/modules/*"],
       "@styles/*": ["src/styles/*"],
       "@types/*": ["src/types/*"],
-      "@animations/*": ["src/components/animations/*"]
+      "@animations/*": ["src/components/animations/*"],
+      "@constants/*":["src/constants/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
