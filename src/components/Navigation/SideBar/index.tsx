@@ -33,7 +33,7 @@ export const SideBar = ({ state, setState }: SideBarProps) => {
             <I.Copyright className="w-5 h-5 stroke-white" />
             <p>Daniel M.</p>
           </Link>
-          <p className="font-mono text-sm">{`<US, ${isCountry.of("ID")} />`}</p>
+          <p className="font-mono text-sm">{`<ZM, ${isCountry.of("ZM")} />`}</p>
         </div>
       </aside>
       <div
